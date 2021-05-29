@@ -1,0 +1,53 @@
+.phones {
+  background-image: url("../../images/bg-pattern-circles.svg"),
+    linear-gradient(to left bottom, rgba(#2f3044, 1), rgba(#3d4063, 1));
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  border-radius: 0 120px 0 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: $primaryTextColor;
+  position: relative;
+
+  @include respond(Phone) {
+    margin-top: 400px;
+  }
+
+  .phones-left {
+    position: absolute;
+    top: -80px;
+    left: 100px;
+    z-index: 2;
+
+    @include respond(Phone) {
+      top: -265px;
+      left: -26px;
+      transform: scale(0.9);
+    }
+  }
+
+  .phones-right {
+    padding: 100px 80px;
+    transform: translateX(850px);
+
+    @include respond(Phone) {
+      transform: translate(0);
+      margin-top: 200px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: $primaryTextColor;
+      font-weight: 500;
+    }
+
+    p {
+      width: 500px;
+      margin-top: 30px;
+      @include respond(Phone) {
+        width: 300px;
+      }
+    }
+  }
+}

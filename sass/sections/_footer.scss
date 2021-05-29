@@ -1,0 +1,73 @@
+.footer {
+  margin-top: 130px;
+  padding: 50px 0px 50px 400px;
+  background-color: #24242c;
+  border-radius: 0 100px 0 0;
+  color: $primaryTextColor;
+  position: relative;
+
+  @include respond(Phone) {
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a > h1 {
+    color: $primaryTextColor;
+  }
+  a {
+    color: $primaryTextColor;
+  }
+
+  .attribution {
+    @include respond(Phone) {
+      top: 89%;
+      left: 14%;
+    }
+  }
+  &-right {
+    margin-left: 300px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    transform: translateY(-30px);
+
+    @include respond(Phone) {
+      transform: translate(0);
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      margin-top: 40px;
+    }
+
+    &-list {
+      margin-right: 200px;
+
+      @include respond(Phone) {
+        margin-right: 0px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      div {
+        margin-bottom: 40px;
+
+        @include respond(Phone) {
+          margin-bottom: 30px;
+        }
+      }
+      ul {
+        li {
+          margin-bottom: 20px;
+          a {
+            font-weight: 100;
+          }
+        }
+      }
+    }
+  }
+}

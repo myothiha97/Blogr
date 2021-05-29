@@ -1,0 +1,177 @@
+.header {
+  background-image: url("../../images/bg-pattern-intro.svg"),
+    linear-gradient(
+      to right bottom,
+      rgba($color-primary, 1),
+      rgba($color-secondary, 1)
+    );
+  background-size: 160%;
+  background-position: left;
+  font-size: 16px;
+  color: $primaryTextColor;
+  padding-bottom: 130px;
+  border-radius: 0 0 0 100px;
+  position: relative;
+
+  @include respond(Phone) {
+    background-image: url("../../images/bg-pattern-intro.svg"),
+      radial-gradient(
+        circle at center,
+        rgba($color-primary, 1),
+        rgba($color-secondary, 1)
+      );
+    background-size: 300%;
+    background-position: -233px -64px;
+  }
+
+  &-nav {
+    padding: 90px 160px 0 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include respond(Phone) {
+      padding: 50px 20px;
+    }
+
+    &-hidden {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
+
+      @include respond(Phone) {
+        display: flex;
+      }
+
+      div {
+        width: 37px;
+        height: 5px;
+        background-color: $primaryTextColor;
+      }
+    }
+
+    &-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h1 {
+        margin-right: 90px;
+        font-size: 2.5rem;
+      }
+
+      &-list {
+        @include justifyFlexRow;
+        @include respond(Phone) {
+          display: none;
+        }
+
+        li {
+          position: relative;
+
+          .hover-popup {
+            padding: 20px 20px;
+            background-color: $primaryTextColor;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(black, 0.5);
+            position: absolute;
+            top: 40px;
+            left: -30px;
+            display: none;
+            .popup-list {
+              display: flex;
+              flex-direction: column;
+            }
+
+            ul > li {
+              color: black;
+              margin-bottom: 15px;
+            }
+          }
+        }
+
+        li > a {
+          margin-right: 50px;
+          @include justifyFlexRow;
+          color: $primaryTextColor;
+
+          &:hover + div {
+            display: block;
+          }
+
+          div {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    &-right {
+      @include justifyFlexRow;
+
+      @include respond(Phone) {
+        display: none;
+      }
+
+      a {
+        margin-right: 60px;
+        color: $primaryTextColor;
+      }
+
+      button {
+        font-size: 16px;
+        background-color: $primaryTextColor;
+        padding: 15px 40px;
+        color: $color-secondary;
+        border-radius: 30px;
+        font-weight: 800;
+      }
+    }
+  }
+
+  &-middle {
+    margin-top: 100px;
+    text-align: center;
+
+    div {
+      h1 {
+        font-size: 3.3rem;
+        font-weight: 500;
+      }
+
+      p {
+        margin-top: 20px;
+        font-size: 16px;
+
+        @include respond(Phone) {
+          padding: 10px 30px;
+          font-size: 1.2rem;
+        }
+      }
+      div {
+        margin-top: 30px;
+        a {
+          button {
+            color: $primaryTextColor;
+            padding: 15px;
+            margin-right: 20px;
+            background-color: transparent;
+            border: 1px solid $primaryTextColor;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: background 0.1s;
+
+            &:hover {
+              background-color: $primaryTextColor;
+              color: $color-secondary;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

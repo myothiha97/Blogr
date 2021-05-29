@@ -1,0 +1,50 @@
+.laptop {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  color: $TextColorSecondary;
+
+  @include respond(Phone) {
+    display: flex;
+    flex-direction: column;
+  }
+  &-left {
+    background-image: url("../../images/illustration-laptop-desktop.svg");
+    background-size: cover;
+    transform: translateX(-277px);
+    width: 739px;
+    height: 640px;
+    @include respond(Phone) {
+      transform: translate(-49px);
+      background-image: url("../../images/illustration-laptop-mobile.svg");
+      width: 462px;
+      height: 400px;
+    }
+  }
+
+  .laptop-right {
+    padding: 0 200px 30px 0;
+
+    @include respond(Phone) {
+      padding: 0 30px;
+      text-align: center;
+    }
+
+    div {
+      &:nth-of-type(1) {
+        margin-bottom: 80px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        width: 500px;
+
+        @include respond(Phone) {
+          width: 300px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+body {
+  background-color: $whitePrimary;
+}
+
+.main {
+  width: 100%;
+  font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+p {
+  margin-top: 20px;
+  font-weight: 100;
+  line-height: 1.7rem;
+}

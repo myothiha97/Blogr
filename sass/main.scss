@@ -1,0 +1,10 @@
+@import "abstracts/variables";
+@import "utils/mixins";
+@import "base.scss";
+
+@import "mobilePopup.scss";
+@import "sections/header";
+@import "sections/design";
+@import "sections/phones";
+@import "sections/laptop";
+@import "sections/footer";

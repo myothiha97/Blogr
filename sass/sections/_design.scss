@@ -1,0 +1,73 @@
+.design-wrapper {
+  margin-top: 130px;
+  padding-left: 130px;
+
+  @include respond(Phone) {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .design {
+    color: $TextColorSecondary;
+    &-heading {
+      text-align: center;
+      color: $TextColorSecondary;
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    div {
+      //   margin-top: 100px;
+      display: flex;
+      flex-direction: row;
+
+      @include respond(Phone) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .design-left {
+        display: flex;
+        flex-direction: column;
+        transform: translateX(200px) translateY(100px);
+
+        @include respond(Phone) {
+          transform: translate(0);
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          &:not(:last-child) {
+            margin-bottom: 80px;
+          }
+          h1 {
+            margin-bottom: 30px;
+
+            @include respond(Phone) {
+              align-self: center;
+            }
+          }
+
+          p {
+            width: 500px;
+
+            @include respond(Phone) {
+              text-align: center;
+              width: 200px;
+              align-self: center;
+            }
+          }
+        }
+      }
+
+      .design-right {
+        transform: translateX(626px) translateY(-149px);
+
+        @include respond(Phone) {
+          margin-top: 50px;
+          transform: translate(0);
+        }
+      }
+    }
+  }
+}
