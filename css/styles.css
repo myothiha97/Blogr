@@ -301,7 +301,7 @@ p {
       display: flex;
       flex-direction: column; } }
   .laptop-left {
-    background-image: url("../../images/illustration-laptop-desktop.svg");
+    background-image: url("../../illustration-laptop-desktop.svg");
     background-size: cover;
     transform: translateX(-277px);
     width: 739px;
@@ -309,7 +309,7 @@ p {
     @media (max-width: 500px) {
       .laptop-left {
         transform: translate(-49px);
-        background-image: url("../../images/illustration-laptop-mobile.svg");
+        background-image: url("../../illustration-laptop-mobile.svg");
         width: 462px;
         height: 400px; } }
   .laptop .laptop-right {
